@@ -15,8 +15,10 @@ def main():
     print('Would you like to create another matrix for oporations with 2 matrix? yes/no')
     user_selection_2 = input('=> ')
     user = md.module_2(user_selection_2)
-    m2 = pt.matrix_options(user)
-    md.module_3(m1, m2)
+    if user != None:
+        m2 = pt.matrix_options(user)
+        md.module_3(m1, m2)
+    md.module_3(m1, user)
 
 def again(user):
     while True:
