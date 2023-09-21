@@ -37,7 +37,7 @@ class JWTBearer(HTTPBearer):
         auth =  await super().__call__(request) 
         data = validate_token(auth.credentials) 
         if data ['email'] != 'admin@gmail.com':
-            raise HTTPException(status_code=403, detail='credenciales son invalidas')
+            raise HTTPException(status_code=403, detail='Crendentials no valid')
 
 
 @app.get('/', tags= ["home"])
